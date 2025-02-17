@@ -7,10 +7,10 @@ local keymap = vim.keymap -- for conciseness
 -- use jk to exit insert mode
 keymap.set("i", "ah", "<ESC>")
 
-keymap.set("n", "<C-h>", "<C-w>h")
-keymap.set("n", "<C-j>", "<C-w>j")
-keymap.set("n", "<C-k>", "<C-w>k")
-keymap.set("n", "<C-l>", "<C-w>l")
+keymap.set("n", "<C-Left>", "<C-w>h")
+keymap.set("n", "<C-Down>", "<C-w>j")
+keymap.set("n", "<C-Up>", "<C-w>k")
+keymap.set("n", "<C-Right>", "<C-w>l")
 
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>")
@@ -23,7 +23,7 @@ keymap.set("n", "<leader>+", "<C-a>") -- increment
 keymap.set("n", "<leader>-", "<C-x>") -- decrement
 
 -- window management
-keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
+keymap.set("n", "<leader>sv", "<C-w>v", { desc = "lol" }) -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- make split windows equal width & height
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
